@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sedan - Facility Management Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        // Helper function to safely set text content
+        function safeSetText(id, text) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.textContent = text;
+            }
+        }
+
+        // Update content to Arabic
+        function updateContentToArabic() {
+            // Navigation
+            safeSetText('nav-home', 'الرئيسية');
+            safeSetText('nav-clients', 'عملاؤنا');
+            safeSetText('nav-contact', 'اتصل بنا');
+
+            // Hero Section
+            safeSetText('heroTitle', 'سِدان لإدارة المرافق');
+            safeSetText('heroSubtitle', 'حلول متكاملة لإدارة وتشغيل المرافق باحترافية وكفاءة عالية لضمان الجودة والاستدامة.');
+
+            // Home About Section
+            safeSetText('homeAboutTitle', 'عن سِدان');
+            safeSetText('homeAboutSubtitle', 'من نحن؟');
+            safeSetText('homeAboutText1', 'في سِدان، نؤمن أن نجاح أي منشأة يبدأ من كفاءة تشغيلها وصيانتها. نحن لا نقدم مجرد خدمة، بل نصنع بيئة تشغيلية آمنة، مريحة، وفعّالة تُمكن عملاءنا من التركيز على أهدافهم الأساسية دون الانشغال بتفاصيل التشغيل.');
+            safeSetText('homeAboutText2', 'نخدم مختلف أنواع المرافق: الحكومية، التجارية، الصحية، التعليمية، السكنية، والمكتبية عبر حلول متكاملة تجمع بين التقنية والخبرة الميدانية.');
+
+            // Home Services Section
+            safeSetText('homeServicesTitle', 'خدماتنا');
+            safeSetText('homeService1Title', 'النظافة والصحة العامة');
+            safeSetText('homeService1Desc', 'تقييم شامل للموقع وحلول تنظيف مخصصة مع فرق مدربة تتبع أعلى معايير الجودة.');
+            safeSetText('homeService2Title', 'تنسيق الحدائق والمساحات الخضراء');
+            safeSetText('homeService2Desc', 'تصميم ورعاية المساحات الخضراء بتقنيات ري حديثة ومبادرات الاستدامة البيئية.');
+            safeSetText('homeService3Title', 'الصيانة الكهربائية والميكانيكية');
+            safeSetText('homeService3Desc', 'صيانة دورية لجميع الأنظمة الكهربائية والميكانيكية مع قدرات الاستجابة السريعة للطوارئ.');
+            safeSetText('homeService4Title', 'المصاعد وأنظمة السلامة');
+            safeSetText('homeService4Desc', 'إدارة المصاعد المتقدمة واختبار وصيانة أنظمة السلامة الشاملة.');
+            safeSetText('homeService5Title', 'الدعم الفني');
+            safeSetText('homeService5Desc', 'دعم فني على مدار الساعة لإدارة المرافق مع قدرات متخصصة للتعامل مع الأعطال.');
+            safeSetText('homeService6Title', 'التقارير والتحسين');
+            safeSetText('homeService6Desc', 'تقارير أداء شهرية مع توصيات التحسين المستمر ومراقبة مؤشرات الأداء.');
+
+            // Why Choose Us Section
+            safeSetText('whyChooseTitle', 'لماذا تختار سِدان؟');
+            safeSetText('homeFeature1Title', 'خبرة متخصصة');
+            safeSetText('homeFeature1Desc', 'خبرة عميقة في إدارة المرافق مع سجل حافل عبر مختلف الصناعات.');
+            safeSetText('homeFeature2Title', 'التركيز على الاستدامة');
+            safeSetText('homeFeature2Desc', 'ملتزمون بالاستدامة البيئية وتقليل الأثر البيئي للعمليات.');
+            safeSetText('homeFeature3Title', 'دعم على مدار الساعة');
+            safeSetText('homeFeature3Desc', 'استجابة طارئة على مدار الساعة ودعم فني للعمليات المستمرة.');
+
+            // Clients Page
+            safeSetText('clientsTitle', 'عملاؤنا');
+            safeSetText('featuresTitle', 'ميزاتنا');
+            safeSetText('feature1Title', 'خبرة متخصصة');
+            safeSetText('feature1Desc', 'خبرة متخصصة في خدمات النظافة وإدارة المساحات الخضراء.');
+            safeSetText('feature2Title', 'التزام بالاستدامة');
+            safeSetText('feature2Desc', 'التزام كامل بالاستدامة وتقليل الأثر البيئي.');
+            safeSetText('feature3Title', 'حلول تقنية متقدمة');
+            safeSetText('feature3Desc', 'حلول تقنية متقدمة (أنظمة إدارة المباني الذكية BMS، مراقبة عن بُعد).');
+            safeSetText('feature4Title', 'استجابة طارئة');
+            safeSetText('feature4Desc', 'استجابة طارئة على مدار الساعة.');
+            safeSetText('feature5Title', 'أسعار تنافسية');
+            safeSetText('feature5Desc', 'أسعار تنافسية مقابل جودة استثنائية.');
+            safeSetText('feature6Title', 'فريق مُخصص');
+            safeSetText('feature6Desc', 'فريق ثابت ومطّلع على تفاصيل المرافق.');
+
+            // Contact Page
+            safeSetText('contactTitle', 'اتصل بنا');
+            safeSetText('contactFormTitle', 'تواصل معنا');
+            safeSetText('nameLabel', 'الاسم');
+            safeSetText('emailLabel', 'البريد الإلكتروني');
+            safeSetText('phoneLabel', 'رقم الهاتف');
+            safeSetText('serviceLabel', 'الخدمة المطلوبة');
+            safeSetText('selectOption', 'اختر الخدمة');
+            safeSetText('facilityOption', 'إدارة المرافق');
+            safeSetText('cleaningOption', 'خدمات النظافة');
+            safeSetText('landscapingOption', 'تنسيق الحدائق');
+            safeSetText('technicalOption', 'الدعم الفني');
+            safeSetText('maintenanceOption', 'الصيانة');
+            safeSetText('messageLabel', 'الرسالة');
+            safeSetText('submitBtn', 'إرسال الرسالة');
+            safeSetText('contactInfoTitle', 'معلومات التواصل');
+            safeSetText('phoneTitle', 'الهاتف');
+            safeSetText('locationsTitle', 'المواقع');
+            safeSetText('location1', '📍 الرياض - حي الحمراء - طريق الملك عبدالله');
+            safeSetText('location2', '📍 جدة - حي المحمدية - طريق الملك عبدالعزيز');
+            safeSetText('location3', '📍 مكة المكرمة - حي العوالي - طريق علي بن أبي طالب');
+
+            // Footer
+            safeSetText('footerDesc', 'حلول متكاملة لإدارة وتشغيل المرافق باحترافية وكفاءة عالية لضمان الجودة والاستدامة.');
+            safeSetText('footerServicesTitle', 'الخدمات');
+            safeSetText('footerService1', 'إدارة المرافق');
+            safeSetText('footerService2', 'خدمات النظافة');
+            safeSetText('footerService3', 'تنسيق الحدائق');
+            safeSetText('footerService4', 'الدعم الفني');
+            safeSetText('footerContactTitle', 'التواصل');
+            safeSetText('footerLocation', '📍 الرياض، جدة، مكة المكرمة');
+            safeSetText('copyright', '© 2014 سِدان لإدارة المرافق. جميع الحقوق محفوظة.');
+        }
+
+        // Update content to English
+        function updateContentToEnglish() {
+            // Navigation
+            safeSetText('nav-home', 'Home');
+            safeSetText('nav-clients', 'Clients');
+            safeSetText('nav-contact', 'Contact');
+
+            // Hero Section
+            safeSetText('heroTitle', 'Sedan Facility Management');
+            safeSetText('heroSubtitle', 'Comprehensive facility management and operation solutions with professionalism and high efficiency to ensure quality and sustainability.');
+
+            // Home About Section
+            safeSetText('homeAboutTitle', 'About SEDAN');
+            safeSetText('homeAboutSubtitle', 'Who We Are?');
+            safeSetText('homeAboutText1', 'At SEDAN, we believe that the success of any facility begins with the efficiency of its operation and maintenance. We don\'t just provide a service, but we create a safe, comfortable, and effective operating environment that enables our clients to focus on their core objectives without worrying about operational details.');
+            safeSetText('homeAboutText2', 'We serve various types of facilities: governmental, commercial, healthcare, educational, residential, and office facilities through integrated solutions that combine technology and field experience.');
+
+            // Home Services Section
+            safeSetText('homeServicesTitle', 'Our Services');
+            safeSetText('homeService1Title', 'Cleaning & Public Health');
+            safeSetText('homeService1Desc', 'Comprehensive site assessment and customized cleaning solutions with trained teams following highest quality standards.');
+            safeSetText('homeService2Title', 'Landscaping & Green Spaces');
+            safeSetText('homeService2Desc', 'Design and maintenance of green spaces with modern irrigation techniques and environmental sustainability initiatives.');
+            safeSetText('homeService3Title', 'Electrical & Mechanical Maintenance');
+            safeSetText('homeService3Desc', 'Periodic maintenance of all electrical and mechanical systems with quick emergency response capabilities.');
+            safeSetText('homeService4Title', 'Elevator & Safety Systems');
+            safeSetText('homeService4Desc', 'Advanced elevator management and comprehensive safety system testing and maintenance.');
+            safeSetText('homeService5Title', 'Technical Support');
+            safeSetText('homeService5Desc', '24/7 technical support for facility management with specialized breakdown handling capabilities.');
+            safeSetText('homeService6Title', 'Reports & Improvement');
+            safeSetText('homeService6Desc', 'Monthly performance reports with continuous improvement recommendations and KPI monitoring.');
+
+            // Why Choose Us Section
+            safeSetText('whyChooseTitle', 'Why Choose SEDAN?');
+            safeSetText('homeFeature1Title', 'Specialized Expertise');
+            safeSetText('homeFeature1Desc', 'Deep expertise in facility management with proven track record across various industries.');
+            safeSetText('homeFeature2Title', 'Sustainability Focus');
+            safeSetText('homeFeature2Desc', 'Committed to environmental sustainability and reducing operational environmental impact.');
+            safeSetText('homeFeature3Title', '24/7 Support');
+            safeSetText('homeFeature3Desc', 'Round-the-clock emergency response and technical support for uninterrupted operations.');
+
+            // Clients Page
+            safeSetText('clientsTitle', 'Our Clients');
+            safeSetText('featuresTitle', 'Our Advantages');
+            safeSetText('feature1Title', 'Specialized Expertise');
+            safeSetText('feature1Desc', 'Specialized expertise in cleaning services and green space management.');
+            safeSetText('feature2Title', 'Sustainability Commitment');
+            safeSetText('feature2Desc', 'Complete commitment to sustainability and reducing environmental impact.');
+            safeSetText('feature3Title', 'Advanced Technology');
+            safeSetText('feature3Desc', 'Advanced technical solutions (smart building management systems BMS, remote monitoring).');
+            safeSetText('feature4Title', 'Emergency Response');
+            safeSetText('feature4Desc', '24/7 emergency response availability.');
+            safeSetText('feature5Title', 'Competitive Pricing');
+            safeSetText('feature5Desc', 'Competitive prices for exceptional quality.');
+            safeSetText('feature6Title', 'Dedicated Team');
+            safeSetText('feature6Desc', 'Stable team familiar with facility details.');
+
+            // Contact Page
+            safeSetText('contactTitle', 'Contact Us');
+            safeSetText('contactFormTitle', 'Get in Touch');
+            safeSetText('nameLabel', 'Name');
+            safeSetText('emailLabel', 'Email');
+            safeSetText('phoneLabel', 'Phone');
+            safeSetText('serviceLabel', 'Service Needed');
+            safeSetText('selectOption', 'Select a service');
+            safeSetText('facilityOption', 'Facility Management');
+            safeSetText('cleaningOption', 'Cleaning Services');
+            safeSetText('landscapingOption', 'Landscaping');
+            safeSetText('technicalOption', 'Technical Support');
+            safeSetText('maintenanceOption', 'Maintenance');
+            safeSetText('messageLabel', 'Message');
+            safeSetText('submitBtn', 'Send Message');
+            safeSetText('contactInfoTitle', 'Contact Information');
+            safeSetText('phoneTitle', 'Phone');
+            safeSetText('locationsTitle', 'Locations');
+            safeSetText('location1', '📍 Riyadh - Al Hamra District - King Abdullah Road');
+            safeSetText('location2', '📍 Jeddah - Al Muhammadiyah District - King Abdulaziz Road');
+            safeSetText('location3', '📍 Makkah - Al Awali District - Ali Ibn Abi Talib Road');
+
+            // Footer
+            safeSetText('footerDesc', 'Comprehensive solutions for facility management and operation with professionalism and high efficiency to ensure quality and sustainability.');
+            safeSetText('footerServicesTitle', 'Services');
+            safeSetText('footerService1', 'Facility Management');
+            safeSetText('footerService2', 'Cleaning Services');
+            safeSetText('footerService3', 'Landscaping');
+            safeSetText('footerService4', 'Technical Support');
+            safeSetText('footerContactTitle', 'Contact');
+            safeSetText('footerLocation', '📍 Riyadh, Jeddah, Makkah');
+            safeSetText('copyright', '© 2014 SEDAN Facility Management. All rights reserved.');
+        }
+
+        // Language toggle functionality
+        function toggleLanguage() {
+            console.log("Language toggle clicked, current language:", currentLanguage);
+            
+            if (currentLanguage === 'en') {
+                currentLanguage = 'ar';
+                document.body.classList.add('rtl');
+                document.body.setAttribute('dir', 'rtl');
+                document.body.setAttribute('lang', 'ar');
+                updateContentToArabic();
+                document.getElementById('langToggle').textContent = 'English';
+                console.log("Switched to Arabic");
+            } else {
+                currentLanguage = 'en';
+                document.body.classList.remove('rtl');
+                document.body.setAttribute('dir', 'ltr');
+                document.body.setAttribute('lang', 'en');
+                updateContentToEnglish();
+                document.getElementById('langToggle').textContent = 'عربي';
+                console.log("Switched to English");
+            }
+        }
+
+        // Navigation functionality
+        function showPage(pageId) {
+            console.log("Navigating to:", pageId);
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-section');
+            pages.forEach(page => page.classList.remove('active'));
+
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+
+            // Close mobile menu if open
+            document.getElementById('navMenu').classList.remove('active');
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Form submission
+        function submitForm(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Here you would normally send the data to your server
+            alert(currentLanguage === 'en' ? 
+                'Thank you for your message! We will contact you soon.' : 
+                'شكراً لرسالتك! سنتواصل معك قريباً.');
+            
+            // Reset form
+            event.target.reset();
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("JavaScript loaded successfully");
+            // Set default page
+            showPage('home');
+        });
+
+        :root {
+            --primary-blue: #2c5aa0;
+            --dark-blue: #1a3d6b;
+            --light-blue: #4a7bc8;
+            --beige: #f5f1e8;
+            --gold: #d4af37;
+            --white: #ffffff;
+            --text-dark: #333333;
+            --text-light: #666666;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        body.rtl {
+            direction: rtl;
+            text-align: right;
+        }
+
+        body.rtl .container {
+            direction: rtl;
+        }
+
+        /* Header and Navigation */
+        .header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--gold);
+        }
+
+        .language-toggle {
+            background: var(--gold);
+            color: var(--dark-blue);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .language-toggle:hover {
+            background: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 80px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            background: var(--gold);
+            color: var(--dark-blue);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section:nth-child(even) {
+            background: var(--beige);
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary-blue);
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-blue);
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+
+        .service-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .service-card p {
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        /* Clients Section */
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .client-logo {
+            text-align: center;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .client-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .client-logo img {
+            width: 100%;
+            max-width: 120px;
+            height: auto;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .client-logo:hover img {
+            filter: grayscale(0%);
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-blue);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .contact-info {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 2rem;
+            color: var(--gold);
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-item i {
+            font-size: 1.2rem;
+            color: var(--gold);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-blue);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--primary-blue);
+            padding-top: 1rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        /* Hidden sections for navigation */
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--dark-blue);
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        /* Arabic RTL Styles */
+        .rtl .nav-menu {
+            flex-direction: row-reverse;
+        }
+
+        .rtl .nav-container {
+            direction: rtl;
+        }
+
+        .rtl .about-content,
+        .rtl .contact-content {
+            direction: rtl;
+        }
+
+        .rtl .contact-item {
+            flex-direction: row-reverse;
+        }
+
+        .rtl .service-card,
+        .rtl .about-text {
+            text-align: right;
+        }
+
+        .rtl .hero,
+        .rtl .section-title {
+            text-align: center;
+        }
+
+        .rtl .service-card h3,
+        .rtl .service-card p {
+            text-align: center;
+        }
+
+        /* Ensure navigation items are properly spaced in RTL */
+        .rtl .nav-menu li {
+            margin-left: 2rem;
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo" id="logoText">Sedan</div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#" onclick="showPage('home')" id="nav-home">Home</a></li>
+                    <li><a href="#" onclick="showPage('clients')" id="nav-clients">Clients</a></li>
+                    <li><a href="#" onclick="showPage('contact')" id="nav-contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="language-toggle" onclick="toggleLanguage()" id="langToggle">عربي</button>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Page -->
+        <div id="home" class="page-section active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container">
+                    <h1 id="heroTitle">Sedan Facility Management</h1>
+                    <p id="heroSubtitle">Comprehensive facility management and operation solutions with professionalism and high efficiency to ensure quality and sustainability.</p>
+                </div>
+            </section>
+
+            <!-- About Section on Home Page -->
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title" id="homeAboutTitle">About SEDAN</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <h3 id="homeAboutSubtitle">Who We Are?</h3>
+                            <p id="homeAboutText1">At SEDAN, we believe that the success of any facility begins with the efficiency of its operation and maintenance. We don't just provide a service, but we create a safe, comfortable, and effective operating environment that enables our clients to focus on their core objectives without worrying about operational details.</p>
+                            <p id="homeAboutText2">We serve various types of facilities: governmental, commercial, healthcare, educational, residential, and office facilities through integrated solutions that combine technology and field experience.</p>
+                        </div>
+                        <div class="about-image">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'><rect width='400' height='300' fill='%232c5aa0'/><text x='200' y='160' font-family='Arial' font-size='24' fill='white' text-anchor='middle'>SEDAN Team</text></svg>" alt="SEDAN Team">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section on Home Page -->
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title" id="homeServicesTitle">Our Services</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">🧹</div>
+                            <h3 id="homeService1Title">Cleaning & Public Health</h3>
+                            <p id="homeService1Desc">Comprehensive site assessment and customized cleaning solutions with trained teams following highest quality standards.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">🌿</div>
+                            <h3 id="homeService2Title">Landscaping & Green Spaces</h3>
+                            <p id="homeService2Desc">Design and maintenance of green spaces with modern irrigation techniques and environmental sustainability initiatives.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">⚡</div>
+                            <h3 id="homeService3Title">Electrical & Mechanical Maintenance</h3>
+                            <p id="homeService3Desc">Periodic maintenance of all electrical and mechanical systems with quick emergency response capabilities.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">🏗️</div>
+                            <h3 id="homeService4Title">Elevator & Safety Systems</h3>
+                            <p id="homeService4Desc">Advanced elevator management and comprehensive safety system testing and maintenance.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">🔧</div>
+                            <h3 id="homeService5Title">Technical Support</h3>
+                            <p id="homeService5Desc">24/7 technical support for facility management with specialized breakdown handling capabilities.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">📊</div>
+                            <h3 id="homeService6Title">Reports & Improvement</h3>
+                            <p id="homeService6Desc">Monthly performance reports with continuous improvement recommendations and KPI monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Choose Us Section -->
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title" id="whyChooseTitle">Why Choose SEDAN?</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">🎯</div>
+                            <h3 id="homeFeature1Title">Specialized Expertise</h3>
+                            <p id="homeFeature1Desc">Deep expertise in facility management with proven track record across various industries.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">🌱</div>
+                            <h3 id="homeFeature2Title">Sustainability Focus</h3>
+                            <p id="homeFeature2Desc">Committed to environmental sustainability and reducing operational environmental impact.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">⚡</div>
+                            <h3 id="homeFeature3Title">24/7 Support</h3>
+                            <p id="homeFeature3Desc">Round-the-clock emergency response and technical support for uninterrupted operations.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="page-section">
+            <!-- Content removed - now only on home page -->
+        </div>
+
+        <!-- Services Page -->
+        <div id="services" class="page-section">
+            <!-- Content removed - now only on home page -->
+        </div>
+
+        <!-- Clients Page -->
+        <div id="clients" class="page-section">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title" id="clientsTitle">Our Clients</h2>
+                    <div class="clients-grid">
+                        <div class="client-logo">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='80' viewBox='0 0 120 80'><rect width='120' height='80' fill='%232c5aa0'/><text x='60' y='45' font-family='Arial' font-size='12' fill='white' text-anchor='middle'>IsDB</text></svg>" alt="Islamic Development Bank">
+                        </div>
+                        <div class="client-logo">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='80' viewBox='0 0 120 80'><rect width='120' height='80' fill='%23008751'/><text x='60' y='45' font-family='Arial' font-size='10' fill='white' text-anchor='middle'>Saudi Binladin</text></svg>" alt="Saudi Binladin Group">
+                        </div>
+                        <div class="client-logo">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='80' viewBox='0 0 120 80'><rect width='120' height='80' fill='%230099cc'/><text x='60' y='45' font-family='Arial' font-size='12' fill='white' text-anchor='middle'>UQU</text></svg>" alt="Umm Al-Qura University">
+                        </div>
+                        <div class="client-logo">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='80' viewBox='0 0 120 80'><rect width='120' height='80' fill='%23008751'/><text x='60' y='45' font-family='Arial' font-size='10' fill='white' text-anchor='middle'>Holy Makkah</text></svg>" alt="Holy Makkah Municipality">
+                        </div>
+                        <div class="client-logo">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='80' viewBox='0 0 120 80'><rect width='120' height='80' fill='%23d4af37'/><text x='60' y='45' font-family='Arial' font-size='10' fill='white' text-anchor='middle'>Makkah Chamber</text></svg>" alt="Makkah Chamber">
+                        </div>
+                        <div class="client-logo">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='80' viewBox='0 0 120 80'><rect width='120' height='80' fill='%23008751'/><text x='60' y='45' font-family='Arial' font-size='8' fill='white' text-anchor='middle'>Ministry Municipal</text></svg>" alt="Ministry of Municipal Affairs">
+                        </div>
+                        <div class="client-logo">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='80' viewBox='0 0 120 80'><rect width='120' height='80' fill='%23008751'/><text x='60' y='45' font-family='Arial' font-size='8' fill='white' text-anchor='middle'>Ministry Hajj</text></svg>" alt="Ministry of Hajj and Umrah">
+                        </div>
+                        <div class="client-logo">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='80' viewBox='0 0 120 80'><rect width='120' height='80' fill='%230099cc'/><text x='60' y='45' font-family='Arial' font-size='8' fill='white' text-anchor='middle'>Ministry Education</text></svg>" alt="Ministry of Education">
+                        </div>
+                        <div class="client-logo">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='80' viewBox='0 0 120 80'><rect width='120' height='80' fill='%23ff4500'/><text x='60' y='45' font-family='Arial' font-size='12' fill='white' text-anchor='middle'>BON</text></svg>" alt="BON">
+                        </div>
+                        <div class="client-logo">
+                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='80' viewBox='0 0 120 80'><rect width='120' height='80' fill='%232c5aa0'/><text x='60' y='45' font-family='Arial' font-size='10' fill='white' text-anchor='middle'>Al Drees</text></svg>" alt="Al Drees">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title" id="featuresTitle">Our Advantages</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">🎯</div>
+                            <h3 id="feature1Title">Specialized Expertise</h3>
+                            <p id="feature1Desc">Specialized expertise in cleaning services and green space management.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">🌱</div>
+                            <h3 id="feature2Title">Sustainability Commitment</h3>
+                            <p id="feature2Desc">Complete commitment to sustainability and reducing environmental impact.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">💻</div>
+                            <h3 id="feature3Title">Advanced Technology</h3>
+                            <p id="feature3Desc">Advanced technical solutions (smart building management systems BMS, remote monitoring).</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">⚡</div>
+                            <h3 id="feature4Title">Emergency Response</h3>
+                            <p id="feature4Desc">24/7 emergency response availability.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">💰</div>
+                            <h3 id="feature5Title">Competitive Pricing</h3>
+                            <p id="feature5Desc">Competitive prices for exceptional quality.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">👥</div>
+                            <h3 id="feature6Title">Dedicated Team</h3>
+                            <p id="feature6Desc">Stable team familiar with facility details.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="page-section">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title" id="contactTitle">Contact Us</h2>
+                    <div class="contact-content">
+                        <div class="contact-form">
+                            <h3 id="contactFormTitle">Get in Touch</h3>
+                            <form id="contactFormElement" onsubmit="submitForm(event)">
+                                <div class="form-group">
+                                    <label for="name" id="nameLabel">Name</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" id="emailLabel">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" id="phoneLabel">Phone</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="service" id="serviceLabel">Service Needed</label>
+                                    <select id="service" name="service" required>
+                                        <option value="" id="selectOption">Select a service</option>
+                                        <option value="facility-management" id="facilityOption">Facility Management</option>
+                                        <option value="cleaning" id="cleaningOption">Cleaning Services</option>
+                                        <option value="landscaping" id="landscapingOption">Landscaping</option>
+                                        <option value="technical-support" id="technicalOption">Technical Support</option>
+                                        <option value="maintenance" id="maintenanceOption">Maintenance</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message" id="messageLabel">Message</label>
+                                    <textarea id="message" name="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="cta-button" id="submitBtn">Send Message</button>
+                            </form>
+                        </div>
+                        <div class="contact-info">
+                            <h3 id="contactInfoTitle">Contact Information</h3>
+                            <div class="contact-item">
+                                <i>📧</i>
+                                <div>
+                                    <strong>Email:</strong><br>
+                                    info@aqalaholding.com
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i>📞</i>
+                                <div>
+                                    <strong id="phoneTitle">Phone:</strong><br>
+                                    +966543434328
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i>📍</i>
+                                <div>
+                                    <strong id="locationsTitle">Locations:</strong><br>
+                                    <div id="location1">📍 Riyadh - Al Hamra District - King Abdullah Road</div>
+                                    <div id="location2">📍 Jeddah - Al Muhammadiyah District - King Abdulaziz Road</div>
+                                    <div id="location3">📍 Makkah - Al Awali District - Ali Ibn Abi Talib Road</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SEDAN</h3>
+                    <p id="footerDesc">Comprehensive solutions for facility management and operation with professionalism and high efficiency to ensure quality and sustainability.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 id="footerServicesTitle">Services</h3>
+                    <p id="footerService1">Facility Management</p>
+                    <p id="footerService2">Cleaning Services</p>
+                    <p id="footerService3">Landscaping</p>
+                    <p id="footerService4">Technical Support</p>
+                </div>
+                <div class="footer-section">
+                    <h3 id="footerContactTitle">Contact</h3>
+                    <p>📧 info@aqalaholding.com</p>
+                    <p>📞 +966543434328</p>
+                    <p id="footerLocation">📍 Riyadh, Jeddah, Makkah</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p id="copyright">&copy; 2014 SEDAN Facility Management. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentLanguage = 'en';
+
+        // Navigation functionality
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-section');
+            pages.forEach(page => page.classList.remove('active'));
+
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+
+            // Update nav active state
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            // Close mobile menu if open
+            document.getElementById('navMenu').classList.remove('active');
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Form submission
+        function submitForm(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Here you would normally send the data to your server
+            alert(currentLanguage === 'en' ? 
+                'Thank you for your message! We will contact you soon.' : 
+                'شكراً لرسالتك! سنتواصل معك قريباً.');
+            
+            // Reset form
+            event.target.reset();
+        }
+
+        // Language toggle functionality
+        function toggleLanguage() {
+            console.log("Language toggle clicked, current language:", currentLanguage);
+            
+            if (currentLanguage === 'en') {
+                currentLanguage = 'ar';
+                document.body.classList.add('rtl');
+                document.body.setAttribute('dir', 'rtl');
+                document.body.setAttribute('lang', 'ar');
+                updateContentToArabic();
+                document.getElementById('langToggle').textContent = 'English';
+                console.log("Switched to Arabic");
+            } else {
+                currentLanguage = 'en';
+                document.body.classList.remove('rtl');
+                document.body.setAttribute('dir', 'ltr');
+                document.body.setAttribute('lang', 'en');
+                updateContentToEnglish();
+                document.getElementById('langToggle').textContent = 'عربي';
+                console.log("Switched to English");
+            }
+        }
+
+        // Update content to Arabic
+        function updateContentToArabic() {
+            // Navigation
+            document.getElementById('nav-home').textContent = 'الرئيسية';
+            document.getElementById('nav-clients').textContent = 'عملاؤنا';
+            document.getElementById('nav-contact').textContent = 'اتصل بنا';
+
+            // Hero Section
+            document.getElementById('heroTitle').textContent = 'سِدان لإدارة المرافق';
+            document.getElementById('heroSubtitle').textContent = 'حلول متكاملة لإدارة وتشغيل المرافق باحترافية وكفاءة عالية لضمان الجودة والاستدامة.';
+            document.getElementById('heroBtn').textContent = 'ابدأ الآن';
+
+            // Home About Section
+            document.getElementById('homeAboutTitle').textContent = 'عن سِدان';
+            document.getElementById('homeAboutSubtitle').textContent = 'من نحن؟';
+            document.getElementById('homeAboutText1').textContent = 'في سِدان، نؤمن أن نجاح أي منشأة يبدأ من كفاءة تشغيلها وصيانتها. نحن لا نقدم مجرد خدمة، بل نصنع بيئة تشغيلية آمنة، مريحة، وفعّالة تُمكن عملاءنا من التركيز على أهدافهم الأساسية دون الانشغال بتفاصيل التشغيل.';
+            document.getElementById('homeAboutText2').textContent = 'نخدم مختلف أنواع المرافق: الحكومية، التجارية، الصحية، التعليمية، السكنية، والمكتبية عبر حلول متكاملة تجمع بين التقنية والخبرة الميدانية.';
+            document.getElementById('learnMoreBtn').textContent = 'اعرف المزيد';
+
+            // Home Services Section
+            document.getElementById('homeServicesTitle').textContent = 'خدماتنا';
+            document.getElementById('homeService1Title').textContent = 'النظافة والصحة العامة';
+            document.getElementById('homeService1Desc').textContent = 'تقييم شامل للموقع وحلول تنظيف مخصصة مع فرق مدربة تتبع أعلى معايير الجودة.';
+            document.getElementById('homeService2Title').textContent = 'تنسيق الحدائق والمساحات الخضراء';
+            document.getElementById('homeService2Desc').textContent = 'تصميم ورعاية المساحات الخضراء بتقنيات ري حديثة ومبادرات الاستدامة البيئية.';
+            document.getElementById('homeService3Title').textContent = 'الصيانة الكهربائية والميكانيكية';
+            document.getElementById('homeService3Desc').textContent = 'صيانة دورية لجميع الأنظمة الكهربائية والميكانيكية مع قدرات الاستجابة السريعة للطوارئ.';
+            document.getElementById('homeService4Title').textContent = 'المصاعد وأنظمة السلامة';
+            document.getElementById('homeService4Desc').textContent = 'إدارة المصاعد المتقدمة واختبار وصيانة أنظمة السلامة الشاملة.';
+            document.getElementById('homeService5Title').textContent = 'الدعم الفني';
+            document.getElementById('homeService5Desc').textContent = 'دعم فني على مدار الساعة لإدارة المرافق مع قدرات متخصصة للتعامل مع الأعطال.';
+            document.getElementById('homeService6Title').textContent = 'التقارير والتحسين';
+            document.getElementById('homeService6Desc').textContent = 'تقارير أداء شهرية مع توصيات التحسين المستمر ومراقبة مؤشرات الأداء.';
+            document.getElementById('allServicesBtn').textContent = 'عرض جميع الخدمات';
+
+            // Why Choose Us Section
+            document.getElementById('whyChooseTitle').textContent = 'لماذا تختار سِدان؟';
+            document.getElementById('homeFeature1Title').textContent = 'خبرة متخصصة';
+            document.getElementById('homeFeature1Desc').textContent = 'خبرة عميقة في إدارة المرافق مع سجل حافل عبر مختلف الصناعات.';
+            document.getElementById('homeFeature2Title').textContent = 'التركيز على الاستدامة';
+            document.getElementById('homeFeature2Desc').textContent = 'ملتزمون بالاستدامة البيئية وتقليل الأثر البيئي للعمليات.';
+            document.getElementById('homeFeature3Title').textContent = 'دعم على مدار الساعة';
+            document.getElementById('homeFeature3Desc').textContent = 'استجابة طارئة على مدار الساعة ودعم فني للعمليات المستمرة.';
+
+            // About Page
+            document.getElementById('aboutTitle').textContent = 'عن سِدان';
+            document.getElementById('aboutSubtitle').textContent = 'من نحن؟';
+            document.getElementById('aboutText1').textContent = 'في سِدان، نؤمن أن نجاح أي منشأة يبدأ من كفاءة تشغيلها وصيانتها. نحن لا نقدم مجرد خدمة، بل نصنع بيئة تشغيلية آمنة، مريحة، وفعّالة تُمكن عملاءنا من التركيز على أهدافهم الأساسية دون الانشغال بتفاصيل التشغيل.';
+            document.getElementById('aboutText2').textContent = 'نخدم مختلف أنواع المرافق: الحكومية، التجارية، الصحية، التعليمية، السكنية، والمكتبية عبر حلول متكاملة تجمع بين التقنية والخبرة الميدانية.';
+
+            // Challenges
+            document.getElementById('challengesTitle').textContent = 'فهمنا لتحديات القطاع';
+            document.getElementById('challenge1Title').textContent = 'المنشآت الصناعية';
+            document.getElementById('challenge1Desc').textContent = 'الحفاظ على نظافة المنشآت الصناعية الكبيرة والمتنوعة.';
+            document.getElementById('challenge2Title').textContent = 'المساحات الخضراء';
+            document.getElementById('challenge2Desc').textContent = 'العناية بالمساحات الخضراء والميادين العامة لتوفير بيئة جاذبة صديقة للبيئة.';
+            document.getElementById('challenge3Title').textContent = 'إدارة النفايات';
+            document.getElementById('challenge3Desc').textContent = 'إدارة النفايات الصناعية والعادية بطرق آمنة ومستدامة.';
+            document.getElementById('challenge4Title').textContent = 'الاستجابة الطارئة';
+            document.getElementById('challenge4Desc').textContent = 'الاستجابة السريعة لأي طارئ يؤثر على البيئة التشغيلية أو الراحة العامة.';
+
+            // Services Page
+            document.getElementById('servicesTitle').textContent = 'خدماتنا';
+            document.getElementById('servicesCard1Title').textContent = 'النظافة والصحة العامة';
+            document.getElementById('servicesCard1Desc').textContent = 'تقييم شامل للموقع لتحديد احتياجات النظافة. خطة تشغيل مخصصة تتناسب مع طبيعة المنشأة. تنفيذ عبر فرق مدربة ومتخصصة وفق أعلى معايير الجودة.';
+            document.getElementById('servicesCard2Title').textContent = 'التشجير والعناية بالمساحات الخضراء';
+            document.getElementById('servicesCard2Desc').textContent = 'تصميم برامج للعناية بالمسطحات الخضراء والتشجير. استخدام تقنيات ري حديثة لترشيد استهلاك المياه. مبادرات بيئية للحد من الأثر البيئي وتعزيز الاستدامة.';
+            document.getElementById('servicesCard3Title').textContent = 'الصيانة الكهربائية والميكانيكية';
+            document.getElementById('servicesCard3Desc').textContent = 'صيانة دورية لأنظمة الكهرباء والإضاءة والمولدات وأنظمة المضخات. صيانة أنظمة التكييف والتبريد ومعالجة الأعطال الطارئة بسرعة دون تعطيل سير العمل.';
+            document.getElementById('servicesCard4Title').textContent = 'إدارة المصاعد وأنظمة السلامة';
+            document.getElementById('servicesCard4Desc').textContent = 'فحص وتشغيل المصاعد بأنظمة متقدمة لضمان الأمان. اختبار أنظمة الإنذار والإخلاء بشكل دوري. التأكد من جاهزية وسائل السلامة في جميع أدوار المبنى.';
+            document.getElementById('servicesCard5Title').textContent = 'خدمة الدعم الفني والتقني';
+            document.getElementById('servicesCard5Desc').textContent = 'مراقبة المرافق المشتركة وصيانة دورات المياه ومغاسل العملاء. كشف وإصلاح التسريبات في الشبكات ومعالجة الانسدادات. دعم فني متخصص لمعالجة الأعطال بسرعة وكفاءة.';
+            document.getElementById('servicesCard6Title').textContent = 'التقارير والتحسين المستمر';
+            document.getElementById('servicesCard6Desc').textContent = 'إصدار تقارير أداء شهرية تشمل الأعمال المنفذة والملاحظات. تقديم توصيات لتحسين الكفاءة وتوفير الطاقة والموارد. مراقبة مؤشرات الأداء التشغيلية للموقع (KPIs) لضمان التحسين المستمر.';
+
+            // How We Work
+            document.getElementById('howWeWorkTitle').textContent = 'كيف نعمل؟';
+            document.getElementById('howWeWorkText').textContent = 'في سِدان، نبدأ بتحليل دقيق لطبيعة المرفق واحتياجاته، ثم نتبع خطوات تضمن تنفيذاً فعالاً وخدمة عالية الجودة:';
+            
+            // Update ordered list
+            const workSteps = document.getElementById('workSteps');
+            workSteps.innerHTML = `
+                <li>تقييم شامل للموقع لتحديد احتياجات النظافة والخدمات المساندة.</li>
+                <li>خطة تشغيل مخصصة بتصميم برنامج تشغيل وصيانة يناسب طبيعة المنشأة.</li>
+                <li>تنفيذ عبر فرق مدربة ومتخصصة في العناية بالمرافق وإدارة المساحات الخضراء.</li>
+                <li>متابعة مستمرة عبر تقارير شهرية تتضمن مراقبة الأداء، الملاحظات، والتوصيات.</li>
+                <li>تحسين مستدام من خلال تطبيق تقنيات خضراء وعبر توصيات لتقليل التكاليف وتحسين الكفاءة التشغيلية.</li>
+            `;
+
+        }document.getElementById('clientsTitle')) {
+                document.getElementById('clientsTitle').textContent = 'عملاؤنا';
+                document.getElementById('featuresTitle').textContent = 'ميزاتنا';
+                document.getElementById('feature1Title').textContent = 'خبرة متخصصة';
+                document.getElementById('feature1Desc').textContent = 'خبرة متخصصة في خدمات النظافة وإدارة المساحات الخضراء.';
+                document.getElementById('feature2Title').textContent = 'التزام بالاستدامة';
+                document.getElementById('feature2Desc').textContent = 'التزام كامل بالاستدامة وتقليل الأثر البيئي.';
+                document.getElementById('feature3Title').textContent = 'حلول تقنية متقدمة';
+                document.getElementById('feature3Desc').textContent = 'حلول تقنية متقدمة (أنظمة إدارة المباني الذكية BMS، مراقبة عن بُعد).';
+                document.getElementById('feature4Title').textContent = 'استجابة طارئة';
+                document.getElementById('feature4Desc').textContent = 'استجابة طارئة على مدار الساعة.';
+                document.getElementById('feature5Title').textContent = 'أسعار تنافسية';
+                document.getElementById('feature5Desc').textContent = 'أسعار تنافسية مقابل جودة استثنائية.';
+                document.getElementById('feature6Title').textContent = 'فريق مُخصص';
+                document.getElementById('feature6Desc').textContent = 'فريق ثابت ومطّلع على تفاصيل المرافق.';
+            }
+
+            // Contact Page
+            if (document.getElementById('contactTitle')) {
+                document.getElementById('contactTitle').textContent = 'اتصل بنا';
+                document.getElementById('contactFormTitle').textContent = 'تواصل معنا';
+                document.getElementById('nameLabel').textContent = 'الاسم';
+                document.getElementById('emailLabel').textContent = 'البريد الإلكتروني';
+                document.getElementById('phoneLabel').textContent = 'رقم الهاتف';
+                document.getElementById('serviceLabel').textContent = 'الخدمة المطلوبة';
+                document.getElementById('selectOption').textContent = 'اختر الخدمة';
+                document.getElementById('facilityOption').textContent = 'إدارة المرافق';
+                document.getElementById('cleaningOption').textContent = 'خدمات النظافة';
+                document.getElementById('landscapingOption').textContent = 'تنسيق الحدائق';
+                document.getElementById('technicalOption').textContent = 'الدعم الفني';
+                document.getElementById('maintenanceOption').textContent = 'الصيانة';
+                document.getElementById('messageLabel').textContent = 'الرسالة';
+                document.getElementById('submitBtn').textContent = 'إرسال الرسالة';
+                document.getElementById('contactInfoTitle').textContent = 'معلومات التواصل';
+                document.getElementById('phoneTitle').textContent = 'الهاتف';
+                document.getElementById('locationsTitle').textContent = 'المواقع';
+                document.getElementById('location1').textContent = '📍 الرياض - حي الحمراء - طريق الملك عبدالله';
+                document.getElementById('location2').textContent = '📍 جدة - حي المحمدية - طريق الملك عبدالعزيز';
+                document.getElementById('location3').textContent = '📍 مكة المكرمة - حي العوالي - طريق علي بن أبي طالب';
+            }
+
+            // Footer
+            document.getElementById('footerDesc').textContent = 'حلول متكاملة لإدارة وتشغيل المرافق باحترافية وكفاءة عالية لضمان الجودة والاستدامة.';
+            document.getElementById('footerServicesTitle').textContent = 'الخدمات';
+            document.getElementById('footerService1').textContent = 'إدارة المرافق';
+            document.getElementById('footerService2').textContent = 'خدمات النظافة';
+            document.getElementById('footerService3').textContent = 'تنسيق الحدائق';
+            document.getElementById('footerService4').textContent = 'الدعم الفني';
+            document.getElementById('footerContactTitle').textContent = 'التواصل';
+            document.getElementById('footerLocation').textContent = '📍 الرياض، جدة، مكة المكرمة';
+            document.getElementById('copyright').textContent = '© 2024 سِدان لإدارة المرافق. جميع الحقوق محفوظة.';
+        }
+
+        // Update content to English
+        function updateContentToEnglish() {
+            // Navigation
+            document.getElementById('nav-home').textContent = 'Home';
+            document.getElementById('nav-clients').textContent = 'Clients';
+            document.getElementById('nav-contact').textContent = 'Contact';
+
+            // Hero Section
+            document.getElementById('heroTitle').textContent = 'SEDAN Facility Management';
+            document.getElementById('heroSubtitle').textContent = 'Comprehensive facility management and operation solutions with professionalism and high efficiency to ensure quality and sustainability.';
+            document.getElementById('heroBtn').textContent = 'Get Started';
+
+            // Home About Section
+            document.getElementById('homeAboutTitle').textContent = 'About SEDAN';
+            document.getElementById('homeAboutSubtitle').textContent = 'Who We Are?';
+            document.getElementById('homeAboutText1').textContent = 'At SEDAN, we believe that the success of any facility begins with the efficiency of its operation and maintenance. We don\'t just provide a service, but we create a safe, comfortable, and effective operating environment that enables our clients to focus on their core objectives without worrying about operational details.';
+            document.getElementById('homeAboutText2').textContent = 'We serve various types of facilities: governmental, commercial, healthcare, educational, residential, and office facilities through integrated solutions that combine technology and field experience.';
+            document.getElementById('learnMoreBtn').textContent = 'Learn More';
+
+            // Home Services Section
+            document.getElementById('homeServicesTitle').textContent = 'Our Services';
+            document.getElementById('homeService1Title').textContent = 'Cleaning & Public Health';
+            document.getElementById('homeService1Desc').textContent = 'Comprehensive site assessment and customized cleaning solutions with trained teams following highest quality standards.';
+            document.getElementById('homeService2Title').textContent = 'Landscaping & Green Spaces';
+            document.getElementById('homeService2Desc').textContent = 'Design and maintenance of green spaces with modern irrigation techniques and environmental sustainability initiatives.';
+            document.getElementById('homeService3Title').textContent = 'Electrical & Mechanical Maintenance';
+            document.getElementById('homeService3Desc').textContent = 'Periodic maintenance of all electrical and mechanical systems with quick emergency response capabilities.';
+            document.getElementById('homeService4Title').textContent = 'Elevator & Safety Systems';
+            document.getElementById('homeService4Desc').textContent = 'Advanced elevator management and comprehensive safety system testing and maintenance.';
+            document.getElementById('homeService5Title').textContent = 'Technical Support';
+            document.getElementById('homeService5Desc').textContent = '24/7 technical support for facility management with specialized breakdown handling capabilities.';
+            document.getElementById('homeService6Title').textContent = 'Reports & Improvement';
+            document.getElementById('homeService6Desc').textContent = 'Monthly performance reports with continuous improvement recommendations and KPI monitoring.';
+            document.getElementById('allServicesBtn').textContent = 'View All Services';
+
+            // Why Choose Us Section
+            document.getElementById('whyChooseTitle').textContent = 'Why Choose SEDAN?';
+            document.getElementById('homeFeature1Title').textContent = 'Specialized Expertise';
+            document.getElementById('homeFeature1Desc').textContent = 'Deep expertise in facility management with proven track record across various industries.';
+            document.getElementById('homeFeature2Title').textContent = 'Sustainability Focus';
+            document.getElementById('homeFeature2Desc').textContent = 'Committed to environmental sustainability and reducing operational environmental impact.';
+            document.getElementById('homeFeature3Title').textContent = '24/7 Support';
+            document.getElementById('homeFeature3Desc').textContent = 'Round-the-clock emergency response and technical support for uninterrupted operations.';
+
+            // About Page
+            document.getElementById('aboutTitle').textContent = 'About SEDAN';
+            document.getElementById('aboutSubtitle').textContent = 'Who We Are?';
+            document.getElementById('aboutText1').textContent = 'At SEDAN, we believe that the success of any facility begins with the efficiency of its operation and maintenance. We don\'t just provide a service, but we create a safe, comfortable, and effective operating environment that enables our clients to focus on their core objectives without worrying about operational details.';
+            document.getElementById('aboutText2').textContent = 'We serve various types of facilities: governmental, commercial, healthcare, educational, residential, and office facilities through integrated solutions that combine technology and field experience.';
+
+            // Challenges
+            document.getElementById('challengesTitle').textContent = 'Understanding Sector Challenges';
+            document.getElementById('challenge1Title').textContent = 'Industrial Facilities';
+            document.getElementById('challenge1Desc').textContent = 'Maintaining cleanliness of large and diverse industrial facilities.';
+            document.getElementById('challenge2Title').textContent = 'Green Spaces';
+            document.getElementById('challenge2Desc').textContent = 'Caring for green spaces and public squares to provide an attractive, eco-friendly environment.';
+            document.getElementById('challenge3Title').textContent = 'Waste Management';
+            document.getElementById('challenge3Desc').textContent = 'Managing industrial and regular waste in safe and sustainable ways.';
+            document.getElementById('challenge4Title').textContent = 'Emergency Response';
+            document.getElementById('challenge4Desc').textContent = 'Quick response to any emergency affecting the operational environment or public comfort.';
+
+            // Services Page
+            document.getElementById('servicesTitle').textContent = 'Our Services';
+            document.getElementById('servicesCard1Title').textContent = 'Cleaning & Public Health';
+            document.getElementById('servicesCard1Desc').textContent = 'Comprehensive site assessment to determine cleaning needs. Customized operation plan suitable for facility nature. Implementation by trained and specialized teams according to highest quality standards.';
+            document.getElementById('servicesCard2Title').textContent = 'Landscaping & Green Space Care';
+            document.getElementById('servicesCard2Desc').textContent = 'Design programs for lawn and landscaping care. Use of modern irrigation techniques to rationalize water consumption. Environmental initiatives to reduce environmental impact and promote sustainability.';
+            document.getElementById('servicesCard3Title').textContent = 'Electrical & Mechanical Maintenance';
+            document.getElementById('servicesCard3Desc').textContent = 'Periodic maintenance of electrical systems, lighting, generators, and pump systems. Maintenance of air conditioning and cooling systems and quick emergency repair handling without disrupting workflow.';
+            document.getElementById('servicesCard4Title').textContent = 'Elevator Management & Safety Systems';
+            document.getElementById('servicesCard4Desc').textContent = 'Inspection and operation of elevators with advanced systems to ensure safety. Testing alarm and evacuation systems regularly. Ensuring readiness of safety equipment on all building floors.';
+            document.getElementById('servicesCard5Title').textContent = 'Technical Support Service';
+            document.getElementById('servicesCard5Desc').textContent = 'Monitoring shared facilities, restroom maintenance, and customer washbasins. Detecting leaks in networks and treating blockages. Specialized support to handle breakdowns quickly and efficiently.';
+            document.getElementById('servicesCard6Title').textContent = 'Reports & Continuous Improvement';
+            document.getElementById('servicesCard6Desc').textContent = 'Issuing monthly performance reports including completed work and observations. Recommendations for efficiency improvement, energy and resource conservation. Monitoring site operational performance KPIs for continuous improvement.';
+
+            // How We Work
+            document.getElementById('howWeWorkTitle').textContent = 'How We Work?';
+            document.getElementById('howWeWorkText').textContent = 'At SEDAN, we start with precise analysis of facility nature and needs, then follow steps that ensure effective implementation and high-quality service:';
+            
+            // Update ordered list
+            const workSteps = document.getElementById('workSteps');
+            workSteps.innerHTML = `
+                <li>Comprehensive site assessment to determine cleaning and support service needs.</li>
+                <li>Customized operation plan designing operation and maintenance program suitable for facility nature.</li>
+                <li>Implementation through trained teams specialized in facility care and green space management.</li>
+                <li>Continuous monitoring through monthly reports including performance monitoring, observations, and recommendations.</li>
+                <li>Sustainable improvement through application of green techniques and recommendations to reduce costs and improve operational efficiency.</li>
+            `;
+
+            // Clients Page
+            document.getElementById('clientsTitle').textContent = 'Our Clients';
+            document.getElementById('featuresTitle').textContent = 'Our Advantages';
+            document.getElementById('feature1Title').textContent = 'Specialized Expertise';
+            document.getElementById('feature1Desc').textContent = 'Specialized expertise in cleaning services and green space management.';
+            document.getElementById('feature2Title').textContent = 'Sustainability Commitment';
+            document.getElementById('feature2Desc').textContent = 'Complete commitment to sustainability and reducing environmental impact.';
+            document.getElementById('feature3Title').textContent = 'Advanced Technology';
+            document.getElementById('feature3Desc').textContent = 'Advanced technical solutions (smart building management systems BMS, remote monitoring).';
+            document.getElementById('feature4Title').textContent = 'Emergency Response';
+            document.getElementById('feature4Desc').textContent = '24/7 emergency response availability.';
+            document.getElementById('feature5Title').textContent = 'Competitive Pricing';
+            document.getElementById('feature5Desc').textContent = 'Competitive prices for exceptional quality.';
+            document.getElementById('feature6Title').textContent = 'Dedicated Team';
+            document.getElementById('feature6Desc').textContent = 'Stable team familiar with facility details.';
+
+            // Contact Page
+            if (document.getElementById('contactTitle')) {
+                document.getElementById('contactTitle').textContent = 'Contact Us';
+                document.getElementById('contactFormTitle').textContent = 'Get in Touch';
+                document.getElementById('nameLabel').textContent = 'Name';
+                document.getElementById('emailLabel').textContent = 'Email';
+                document.getElementById('phoneLabel').textContent = 'Phone';
+                document.getElementById('serviceLabel').textContent = 'Service Needed';
+                document.getElementById('selectOption').textContent = 'Select a service';
+                document.getElementById('facilityOption').textContent = 'Facility Management';
+                document.getElementById('cleaningOption').textContent = 'Cleaning Services';
+                document.getElementById('landscapingOption').textContent = 'Landscaping';
+                document.getElementById('technicalOption').textContent = 'Technical Support';
+                document.getElementById('maintenanceOption').textContent = 'Maintenance';
+                document.getElementById('messageLabel').textContent = 'Message';
+                document.getElementById('submitBtn').textContent = 'Send Message';
+                document.getElementById('contactInfoTitle').textContent = 'Contact Information';
+                document.getElementById('phoneTitle').textContent = 'Phone';
+                document.getElementById('locationsTitle').textContent = 'Locations';
+                document.getElementById('location1').textContent = '📍 Riyadh - Al Hamra District - King Abdullah Road';
+                document.getElementById('location2').textContent = '📍 Jeddah - Al Muhammadiyah District - King Abdulaziz Road';
+                document.getElementById('location3').textContent = '📍 Makkah - Al Awali District - Ali Ibn Abi Talib Road';
+            }
+
+            // Footer
+            document.getElementById('footerDesc').textContent = 'Comprehensive solutions for facility management and operation with professionalism and high efficiency to ensure quality and sustainability.';
+            document.getElementById('footerServicesTitle').textContent = 'Services';
+            document.getElementById('footerService1').textContent = 'Facility Management';
+            document.getElementById('footerService2').textContent = 'Cleaning Services';
+            document.getElementById('footerService3').textContent = 'Landscaping';
+            document.getElementById('footerService4').textContent = 'Technical Support';
+            document.getElementById('footerContactTitle').textContent = 'Contact';
+            document.getElementById('footerLocation').textContent = '📍 Riyadh, Jeddah, Makkah';
+            document.getElementById('copyright').textContent = '© 2024 SEDAN Facility Management. All rights reserved.';
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set default page
+            showPage('home');
+        });
+    </script>
+</body>
+</html>

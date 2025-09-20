@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SEDAN Facility Management | اتصل بنا - سيدان لإدارة المرافق</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #0d3250;
+            background-color: #f5e9cf;
+            padding-top: 80px;
+        }
+
+        header {
+            background: #0d3250;
+            color: #f5e9cf;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: #f5e9cf;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #0d3250;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #f5e9cf;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: rgba(245, 233, 207, 0.1);
+        }
+
+        .nav-links a.active {
+            background: rgba(245, 233, 207, 0.2);
+        }
+
+        .lang-toggle {
+            background: #f5e9cf;
+            color: #0d3250;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .lang-toggle:hover {
+            background: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .contact-boxes {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-box {
+            flex: 1;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid #0d3250;
+            min-height: 500px;
+        }
+
+        .section-title {
+            color: #0d3250;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #f8f8f8;
+            border-radius: 8px;
+        }
+
+        .icon-wrapper {
+            background: #f5e9cf;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info-content h4 {
+            color: #0d3250;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #0d3250;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #0d3250;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: #0d3250;
+            color: #fff;
+            border: none;
+            padding: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #164875;
+        }
+
+        .map-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid #0d3250;
+        }
+
+        .locations-grid {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .location-card {
+            flex: 1;
+            background: #f5e9cf;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #0d3250;
+        }
+
+        .location-card h4 {
+            margin-bottom: 1rem;
+            color: #0d3250;
+        }
+
+        .hidden-lang {
+            display: none !important;
+        }
+
+        html[dir="rtl"] {
+            text-align: right;
+        }
+
+        html[dir="rtl"] .nav-links {
+            flex-direction: row-reverse;
+        }
+
+        html[dir="rtl"] .form-group label {
+            text-align: right;
+        }
+
+        html[dir="rtl"] .info-item {
+            flex-direction: row-reverse;
+        }
+
+        html[dir="rtl"] input,
+        html[dir="rtl"] textarea,
+        html[dir="rtl"] select {
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            .contact-boxes {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+
+            .locations-grid {
+                flex-direction: column;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-icon">S</div>
+                <div>SEDAN</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="jobs.html"><span data-lang-en>Jobs</span><span data-lang-ar class="hidden-lang">الوظائف</span></a></li>
+                <li><a href="contact.html" class="active"><span data-lang-en>Contact</span><span data-lang-ar class="hidden-lang">التواصل</span></a></li>
+                <li><a href="clients.html"><span data-lang-en>Clients</span><span data-lang-ar class="hidden-lang">عملاؤنا</span></a></li>
+                <li><a href="index.html"><span data-lang-en>Home</span><span data-lang-ar class="hidden-lang">الرئيسية</span></a></li>
+            </ul>
+            <button class="lang-toggle" onclick="toggleLanguage()">العربية</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="contact-boxes">
+                <!-- Contact Information Box -->
+                <div class="contact-box">
+                    <h3 class="section-title">
+                        <span data-lang-en>Contact Information</span>
+                        <span data-lang-ar class="hidden-lang">معلومات التواصل</span>
+                    </h3>
+                    <div class="info-item">
+                        <div class="icon-wrapper">📧</div>
+                        <div class="info-content">
+                            <h4>
+                                <span data-lang-en>Email</span>
+                                <span data-lang-ar class="hidden-lang">البريد الإلكتروني</span>
+                            </h4>
+                            <p>info@aqalaholding.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon-wrapper">📞</div>
+                        <div class="info-content">
+                            <h4>
+                                <span data-lang-en>Phone</span>
+                                <span data-lang-ar class="hidden-lang">الهاتف</span>
+                            </h4>
+                            <p dir="ltr">+966543434328</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon-wrapper">📍</div>
+                        <div class="info-content">
+                            <h4>
+                                <span data-lang-en>Locations</span>
+                                <span data-lang-ar class="hidden-lang">المواقع</span>
+                            </h4>
+                            <p>
+                                <span data-lang-en>Riyadh - Al Hamra District<br>King Abdullah Road</span>
+                                <span data-lang-ar class="hidden-lang">الرياض - حي الحمراء<br>طريق الملك عبدالله</span>
+                            </p>
+                            <p>
+                                <span data-lang-en>Jeddah - Al Muhammadiyah District<br>King Abdulaziz Road</span>
+                                <span data-lang-ar class="hidden-lang">جدة - حي المحمدية<br>طريق الملك عبدالعزيز</span>
+                            </p>
+                            <p>
+                                <span data-lang-en>Makkah - Al Awali District<br>Ali Ibn Abi Talib Road</span>
+                                <span data-lang-ar class="hidden-lang">مكة المكرمة - حي العوالي<br>طريق علي بن أبي طالب</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Get in Touch Box -->
+                <div class="contact-box">
+                    <h3 class="section-title">
+                        <span data-lang-en>Get in Touch</span>
+                        <span data-lang-ar class="hidden-lang">تواصل معنا</span>
+                    </h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">
+                                <span data-lang-en>Name:</span>
+                                <span data-lang-ar class="hidden-lang">الاسم:</span>
+                            </label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                <span data-lang-en>Email:</span>
+                                <span data-lang-ar class="hidden-lang">البريد الإلكتروني:</span>
+                            </label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">
+                                <span data-lang-en>Phone:</span>
+                                <span data-lang-ar class="hidden-lang">الهاتف:</span>
+                            </label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">
+                                <span data-lang-en>Service Needed:</span>
+                                <span data-lang-ar class="hidden-lang">الخدمة المطلوبة:</span>
+                            </label>
+                            <select id="service" name="service" required>
+                                <option value="">
+                                    <span data-lang-en>Select a service</span>
+                                    <span data-lang-ar class="hidden-lang">اختر خدمة</span>
+                                </option>
+                                <option value="owners-association">
+                                    <span data-lang-en>Owners' Association</span>
+                                    <span data-lang-ar class="hidden-lang">إدارة اتحاد الملاك</span>
+                                </option>
+                                <option value="cleaning">
+                                    <span data-lang-en>Cleaning & Public Health</span>
+                                    <span data-lang-ar class="hidden-lang">النظافة والصحة العامة</span>
+                                </option>
+                                <option value="landscaping">
+                                    <span data-lang-en>Landscaping & Green Spaces</span>
+                                    <span data-lang-ar class="hidden-lang">تنسيق الحدائق والمساحات الخضراء</span>
+                                </option>
+                                <option value="electrical-mechanical">
+                                    <span data-lang-en>Electrical & Mechanical Maintenance</span>
+                                    <span data-lang-ar class="hidden-lang">الصيانة الكهربائية والميكانيكية</span>
+                                </option>
+                                <option value="elevator-safety">
+                                    <span data-lang-en>Elevator & Safety Systems</span>
+                                    <span data-lang-ar class="hidden-lang">المصاعد وأنظمة السلامة</span>
+                                </option>
+                                <option value="technical-support">
+                                    <span data-lang-en>Technical Support</span>
+                                    <span data-lang-ar class="hidden-lang">الدعم الفني</span>
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">
+                                <span data-lang-en>Message:</span>
+                                <span data-lang-ar class="hidden-lang">الرسالة:</span>
+                            </label>
+                            <textarea id="message" name="message"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span data-lang-en>Send Message</span>
+                            <span data-lang-ar class="hidden-lang">إرسال الرسالة</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-section">
+                <h3 class="section-title">
+                    <span data-lang-en>Our Locations</span>
+                    <span data-lang-ar class="hidden-lang">مواقعنا</span>
+                </h3>
+                <div class="locations-grid">
+                    <div class="location-card">
+                        <h4>
+                            <span data-lang-en>Riyadh Office</span>
+                            <span data-lang-ar class="hidden-lang">مكتب الرياض</span>
+                        </h4>
+                        <p>
+                            <span data-lang-en>Al Hamra District<br>King Abdullah Road<br>Riyadh, Saudi Arabia</span>
+                            <span data-lang-ar class="hidden-lang">حي الحمراء<br>طريق الملك عبدالله<br>الرياض، المملكة العربية السعودية</span>
+                        </p>
+                    </div>
+                    <div class="location-card">
+                        <h4>
+                            <span data-lang-en>Jeddah Office</span>
+                            <span data-lang-ar class="hidden-lang">مكتب جدة</span>
+                        </h4>
+                        <p>
+                            <span data-lang-en>Al Muhammadiyah District<br>King Abdulaziz Road<br>Jeddah, Saudi Arabia</span>
+                            <span data-lang-ar class="hidden-lang">حي المحمدية<br>طريق الملك عبدالعزيز<br>جدة، المملكة العربية السعودية</span>
+                        </p>
+                    </div>
+                    <div class="location-card">
+                        <h4>
+                            <span data-lang-en>Makkah Office</span>
+                            <span data-lang-ar class="hidden-lang">مكتب مكة المكرمة</span>
+                        </h4>
+                        <p>
+                            <span data-lang-en>Al Awali District<br>Ali Ibn Abi Talib Road<br>Makkah, Saudi Arabia</span>
+                            <span data-lang-ar class="hidden-lang">حي العوالي<br>طريق علي بن أبي طالب<br>مكة المكرمة، المملكة العربية السعودية</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('[data-lang-ar]').forEach(el => {
+                el.classList.add('hidden-lang');
+            });
+        });
+
+        function toggleLanguage() {
+            const button = document.querySelector('.lang-toggle');
+            const html = document.documentElement;
+            const isEnglish = button.textContent === 'العربية';
+            
+            button.textContent = isEnglish ? 'English' : 'العربية';
+            html.setAttribute('lang', isEnglish ? 'ar' : 'en');
+            html.setAttribute('dir', isEnglish ? 'rtl' : 'ltr');
+            
+            document.querySelectorAll('[data-lang-en], [data-lang-ar]').forEach(el => {
+                el.classList.add('hidden-lang');
+            });
+            
+            const elementsToShow = isEnglish ? '[data-lang-ar]' : '[data-lang-en]';
+            document.querySelectorAll(elementsToShow).forEach(el => {
+                el.classList.remove('hidden-lang');
+            });
+        }
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const service = formData.get('service');
+            
+            if (!name || !email || !phone || !service) {
+                const isArabic = document.documentElement.lang === 'ar';
+                alert(isArabic ? 'يرجى ملء جميع الحقول المطلوبة.' : 'Please fill in all required fields.');
+                return;
+            }
+            
+            const isArabic = document.documentElement.lang === 'ar';
+            const message = isArabic
+                ? `شكراً لك، ${name}! تم إرسال رسالتك بنجاح. سنتواصل معك قريباً على ${email} بخصوص طلب ${service} الخاص بك.`
+                : `Thank you, ${name}! Your message has been sent successfully. We will contact you soon at ${email} regarding your ${service} needs.`;
+            alert(message);
+            
+            this.reset();
+        });
+    </script>
+</body>
+</html>
